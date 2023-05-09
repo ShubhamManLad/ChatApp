@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignupActivity"
+    android:orientation="vertical"
+    android:layout_margin="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:layout_gravity="center"
+        android:textSize="32dp"
+        android:layout_marginTop="280dp"/>
+
+    <EditText
+        android:id="@+id/new_name_editText"
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name:"
+        android:inputType="textPersonName"/>
+
+    <EditText
+        android:id="@+id/new_email_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email ID:"
+        android:inputType="textEmailAddress"/>
+
+    <EditText
+        android:id="@+id/new_password_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password:"
+        android:inputType="textPassword"/>
+
+    <Button
+        android:id="@+id/signup_button"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up" />
+
+    <TextView
+        android:id="@+id/login_text"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account exists already?\nClick here to login."
+        android:gravity="center"
+        android:textStyle="italic"/>
+
+</LinearLayout>
