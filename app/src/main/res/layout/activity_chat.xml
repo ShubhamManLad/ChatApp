@@ -6,39 +6,58 @@
     android:layout_height="match_parent"
     tools:context=".ChatActivity"
     android:orientation="vertical"
-    android:layout_margin="20dp">
+    android:fitsSystemWindows="true"
+    android:id="@+id/chat_layout">
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_weight="5"
         android:id="@+id/chat_recyclerView"
         android:layout_alignParentTop="true"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"/>
 
-    <LinearLayout
-        android:padding="10dp"
-        android:id="@+id/sendMessageLayout"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <EditText
-            android:id="@+id/message_editText"
+    <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_weight="5"
-            android:hint="Message:" />
+            android:backgroundTint="@color/teal_700"
+            app:contentPadding="5dp"
+            app:strokeWidth="3dp"
+            app:strokeColor="@color/black"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="50dp"
+            android:id="@+id/message_cardView">
 
-        <ImageView
-            android:padding="5dp"
-            android:layout_marginStart="5dp"
-            android:id="@+id/send_image"
-            android:layout_alignParentRight="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/send_img"/>
+            <LinearLayout
+                android:id="@+id/sendMessageLayout"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    </LinearLayout>
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/message_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="5"
+                    android:hint="Message:" />
+
+                <ImageView
+                    android:padding="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/send_image"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/send_img"/>
+
+            </LinearLayout>
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
 </LinearLayout>
